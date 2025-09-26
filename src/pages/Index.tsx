@@ -1,11 +1,6 @@
 import { useState } from "react";
-import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
-import { KPICards } from "@/components/dashboard/KPICards";
-import { EnergyFlowDiagram } from "@/components/dashboard/EnergyFlowDiagram";
-import { AIInsights } from "@/components/dashboard/AIInsights";
-import { SystemHealth } from "@/components/dashboard/SystemHealth";
-import { EnergySharing } from "@/components/dashboard/EnergySharing";
-import { ChatInterface } from "@/components/dashboard/ChatInterface";
+import { Navigation } from "@/components/dashboard/Navigation";
+import { Dashboard } from "./Dashboard";
 import { Button } from "@/components/ui/button";
 import { Users, Wrench } from "lucide-react";
 
@@ -19,7 +14,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-dashboard">
-      <DashboardHeader userRole={userRole} userName={userName} />
+      <Navigation userRole={userRole} userName={userName} />
       
       {/* Role Toggle */}
       <div className="p-6 pb-0">
@@ -43,40 +38,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="p-6 space-y-6">
-        {/* KPI Cards - Always visible */}
-        <KPICards />
-
-        {userRole === "admin" ? (
-          <>
-            {/* Admin Dashboard */}
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-              <div className="xl:col-span-2 space-y-6">
-                <EnergyFlowDiagram />
-                <EnergySharing />
-              </div>
-              <div className="space-y-6">
-                <AIInsights />
-                <ChatInterface />
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            {/* Technician Dashboard */}
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-              <div className="xl:col-span-2 space-y-6">
-                <EnergyFlowDiagram />
-                <SystemHealth />
-              </div>
-              <div className="space-y-6">
-                <AIInsights />
-                <ChatInterface />
-              </div>
-            </div>
-          </>
-        )}
-      </div>
+      <Dashboard />
 
       {/* Footer */}
       <footer className="mt-12 border-t border-border/50 p-6">

@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Energy-themed professional design system */
-    --background: 218 24% 5%;
-    --foreground: 210 40% 98%;
+    /* Energy-themed professional design system - lighter dark theme */
+    --background: 218 15% 15%;
+    --foreground: 210 20% 95%;
 
-    --card: 220 20% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 12% 18%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 220 20% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 12% 18%;
+    --popover-foreground: 210 20% 95%;
 
     /* Electric blue primary theme */
     --primary: 200 100% 50%;
@@ -28,8 +28,8 @@ All colors MUST be HSL.
     --secondary-foreground: 210 40% 98%;
     --secondary-glow: 142 76% 56%;
 
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    --muted: 215 15% 25%;
+    --muted-foreground: 217.9 10% 70%;
 
     /* Warning orange accent */
     --accent: 25 95% 53%;
@@ -54,8 +54,8 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
+    --border: 215 15% 25%;
+    --input: 215 15% 25%;
     --ring: 200 100% 50%;
 
     /* Energy gradients */
